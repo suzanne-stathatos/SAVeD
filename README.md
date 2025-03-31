@@ -240,11 +240,12 @@ python main.py --dataset "custom_dataset" --base_folder /path/to/dataset_name_fl
 
 Please refer to our paper for details and consider citing it if you find the paper or code useful:
 ```
-@article{saved2025,
-title={SAVeD: Learning to Denoise Low-SNR Video for Improved Downstream Performance},
-author={Stathatos, Suzanne and Hobley, Michael and Marks, Markus and Perona, Pietro},
-journal={},
-year={2025},
+@article{stathatos2025saved,
+  title={SAVeD: Learning to Denoise Low-SNR Video for Improved Downstream Performance},
+  author={Stathatos, Suzanne and Hobley, Michael and Marks, Markus and Perona, Pietro},
+  journal={},
+  year={2025},
+  month={March}
 }
 ```
 
