@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SAVeD: Learning to Denoise Low-SNR Video for Improved Downstream Performance</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icons8-superwoman-16.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SAVeD: Learning to Denoise Low-SNR Video for Improved Downstream Performance</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/suzanne-stathatos-b2209a64/" target="_blank">Suzanne Stathatos</a><sup></sup>,</span>
+                <span class="author-block">
+                  <a href="https://mahobley.github.io/" target="_blank">Michael Hobley</a><sup></sup>,</span>
+                  <span class="author-block">
+                    <a href="https://damaggu.github.io/" target="_blank">Markus Marks</a><sup>*</sup>,</span>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://www.vision.caltech.edu/" target="_blank">Pietro Perona</a><sup>*</sup>,</span>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">California Institute of Technology<br></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/suzanne-stathatos/SAVeD/blob/main/README.md" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- Replace video with image -->
+      <img src="static/images/SAVeD_figure.jpg" alt="SAVeD teaser figure" width="100%">
+      <div class="has-text-centered">
+        <h2 class="title is-4">Raw vs. Denoised Frames</h2>
+        <img src="static/images/qualitative_row_across_datasets_loop.gif" alt="MY ALT TEXT" loop="infinite"/>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        <strong>SpatioTemporal Denoising improves classification, detection, tracking, and counting in video</strong>. 
+        We denoise sonar and ultrasound videos of fish in a river, lung scans, breast lesion scans, and cell microscopy 
+        to improve downstream classification, detection, tracking, and counting tasks. We propose a self-supervised method 
+        to enhance the foreground signal of video frames without manual annotations. Our method works on videos with: 
+        non-stationary backgrounds, low signal-to-noise-ratios, and a variable number of objects in a video.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+              <h2 class="title is-3">Abstract</h2>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <div class="content has-text-justified">
+                  <p>
+                    Foundation models excel at vision tasks in natural images but fail in low signal-to-noise ratio (SNR) videos, 
+                    such as underwater sonar, ultrasound, and microscopy. We introduce <strong>S</strong>patiotemporal <strong>A</strong>ugmentations and denoising 
+                    in <strong>V</strong>id<strong>e</strong>o for <strong>D</strong>ownstream Tasks (SAVeD), a self-supervised method that denoises low-SNR sensor videos and is 
+                    trained using only the raw noisy data. By leveraging differences in foreground and background motion, SAVeD enhances object visibility using an encoder-decoder 
+                    with a temporal bottleneck. Our approach improves classification, detection, tracking, and counting, outperforming state-of-the-art video denoising methods 
+                    with lower resource requirements. Our code is available <a href="https://github.com/suzanne-stathatos/SAVeD" target="_blank">here</a>.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Paper Method -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+              <h2 class="title is-3">Methods</h2>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- End Method -->
+
+<!--  Overall method-->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <h2 class="title is-4">Overall method</h2>
+              <img src="static/images/SAVeD_method.jpg" alt="MY ALT TEXT"/>
+              <div class="content has-text-justified">
+                  <p><b>Overview of method and architecture.</b> Our method makes use of denoising autoencoders. 
+                    We encode 3 sequential frames of a video into their latent representations and pass them through 
+                    a spatiotemporal bottleneck that compresses the 3 appearance features into a single spatiotemporal feature representation. 
+                    We then pass this spatiotemporal feature representation through a decoder to reconstruct the target frame. 
+                    The decoder generates a reconstruction target, which is then compared with the ground-truth reconstruction target.
+                    We leverage an L2 loss function to train out model, backpropagating the error across all of the networks in the orange box jointly.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!--  Reconstruction loss-->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <h2 class="title is-4">Reconstruction target</h2>
+              <img src="static/images/SAVeD_Reconstruction_target.jpg" alt="MY ALT TEXT"/>
+              <div class="content has-text-justified">
+                <p><b>Overview of our reconstruction target.</b> We call our target the positive frame difference with the current frame (PFDwTN). 
+                  It incorporates spatiotemporal information with the existing frame to exploit/exaggerate the motion of the foreground objects.
+                  Positive motion of the next frame is defined as the maximum above-zero difference between the next frame and the current frame, 
+                  while positive motion from the previous frame is defined as the maximum above-zero difference between the current frame and the previous frame.
+                  To handle frames where the background movement does not differ significantly from the foreground objects' motion (i.e. stationary objects), we
+                  also include the current frame in the reconstruction target. We find that exploiting the motion signature improves performance on downstream tasks.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Analysis -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+              <h2 class="title is-3">Results</h2>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="image-container">
+          <div>
+              <h2 class="title is-4">Quantitative</h2>
+              <img src="static/images/SAVeD_results.jpg" alt="MY ALT TEXT"/>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="content has-text-justified">
+        <p> SAVeD does well across all datasets and downstream tasks. Best performance is <strong>bolded</strong>. Baseline refers to raw for medical ultrasound (POCUS and BUV) and the strengthened baseline CFC22++ for fish sonar (CFC22). 
+          AP=average precision, AR=average recall, F1=average F1, mAP50=mean average precision of detections at IOU threshold 0.5, MOTA=Multi-Object Tracking Accuracy, nMAE=normalized mean absolute counting error. We also show qualitative results across all dataset. We show a series of the original frames compared to the same series of denoised frames. </p>
+      </div>         
+
+  </div>
+</section>
+
+
+
+<!-- Analysis -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+              <h2 class="title is-3">Analysis</h2>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <img src="static/images/recon_target_vs_dae.jpg" alt="MY ALT TEXT"/>
+              <div class="content has-text-justified">
+                <p> We analyze the effects of leveraging the reconstruction targets alone vs. leveraging them with the denoising 
+                  autoencoder to find their relative importance. We compare the reconstruction targets with positive frame difference
+                  with T=1 (PFDwT1) and T=2 (PFDwT2), the standard deviation over input frames, the sum of 5 consecutive frames minus
+                  5 times the mean frame, and the sum of 3 consecutive frames minus 3 times the mean frame. We explore how a downstream 
+                  detection model does with just the reconstruction targetted frames vs. the denoised frames. We find that for all reconstruction
+                  targets, the denoised frames perform better than the reconstruction frames alone. Among the reconstruction target frames alone, 
+                  sigma performs the best, while when combined with the denoising autoencoder, PFDwT1 performs the best.
+                </p>
+              </div>
+              <div class="image-container">
+                <div>
+                    <h2 class="title is-4">Detection Heatmaps</h2>
+                    <img src="static/images/heatmaps.gif" alt="MY ALT TEXT"/>
+                </div>
+                <div>
+                    <h2 class="title is-4">Trajectories</h2>
+                    <img src="static/images/trajectories.gif" alt="MY ALT TEXT"/>
+                </div>
+              </div>
+              <br>
+              <div class="content has-text-justified">
+                <p><b>Qualitative detection and tracking analysis.</b>
+                  We use heatmaps and trajectory plots of videos to qualitatively analyze the effects of SAVeD on detection and tracking in CFC22.
+                  In the gif on the left, we show detection heatmaps normalized across a dataset to see where objects are (ground-truth), where a model trained
+                  on SAVeD frames detects them, and where the same model trained on denoised frames from the previous baseline model detects them.
+                  In the ground truth, areas of high occurence are highlighted in red, while areas of low occurence are highlighted in blue.
+                  In the detection heatmaps, we break detections down by patches, which indicate mAP50 performance in those patches.
+                  The higher the mAP50 of that patch, the more red it is. The lower the mAP50 of that patch, the more blue it is. The last frame indicates 
+                  the difference between the two denoising approaches on the downstream detection model. We can see that denoising improves detections in 
+                  areas where signal is infrequent. On the other hand, detection performance declines in areas where signal is abundant.
+
+                  In the gif on the right, we show trajectory plots of a single clip in each dataset (train, val, test) to see how the improved detections
+                  affect subsequent tracking performance. Orange dots indicate false negatives, green dots indicate true positives, and red dots indicate
+                  false positives. We can see that the SAVeD frames have fewer false negatives and false positives.
+                </p>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Related work -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+              <h2 class="title is-3">Related work</h2>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+      <!-- <div class="columns is-centered has-text-centered"> -->
+          <!-- <div class="column is-four-fifths"> -->
+              <div class="content has-text-justified">
+                <p><b>The related methods and datasets that most inspired our work.</b>
+                  <br>
+                  <a href="https://github.com/neuroethology/BKinD/tree/main" target="_blank">Self-Supervised Keypoint Discovery in Behavioral Videos</a>
+                  <pre><code>
+                    @article{bkind2021,
+                      title={Self-Supervised Keypoint Discovery in Behavioral Videos},
+                      author={Sun, Jennifer J and Ryou, Serim and Goldshmid, Roni and Weissbourd, Brandon and Dabiri, John and Anderson, David J and Kennedy, Ann and Yue, Yisong and Perona, Pietro},
+                      journal={arXiv preprint arXiv:2112.05121},
+                      year={2021}
+                    }
+                  </code></pre>
+                  <br>
+                  <a href="https://sreyas-mohan.github.io/udvd/" target="_blank">Unsupervised Deep Video Denoising</a>
+                  <pre><code>
+                    @InProceedings{Sheth_2021_ICCV,
+                      author = {Sheth, Dev Yashpal and Mohan, Sreyas and Vincent, Joshua and Manzorro, Ramon and Crozier, Peter A. and Khapra, Mitesh M. and Simoncelli, Eero P. and Fernandez-Granda, Carlos},
+                      title = {Unsupervised Deep Video Denoising},
+                      booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+                      month = {October},
+                      year = {2021}
+                  }
+                  </code></pre>
+                  <br>
+                  <a href="https://github.com/lucasjellen/video-denoising" target="_blank">The Caltech Fish Counting Dataset: A Benchmark for Multiple-Object Tracking and Counting</a>
+                  <pre><code>
+                    @inproceedings{cfc2022eccv,
+                      author    = {Kay, Justin and Kulits, Peter and Stathatos, Suzanne and Deng, Siqi and Young, Erik and Beery, Sara and Van Horn, Grant and Perona, Pietro},
+                      title     = {The Caltech Fish Counting Dataset: A Benchmark for Multiple-Object Tracking and Counting},
+                      booktitle = {European Conference on Computer Vision (ECCV)},
+                      year      = {2022}
+                  }
+                  </code></pre>
+
+                </p>
+            <!-- </div> -->
+          <!-- </div> -->
+      <!-- </div> -->
+  </div>
+</section>
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @article{stathatos2025saved,
+          title={SAVeD: Learning to Denoise Low-SNR Video for Improved Downstream Performance},
+          author={Stathatos, Suzanne and Hobley, Michael and Marks, Markus and Perona, Pietro},
+          journal={},
+          year={2025},
+          month={March}
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. 
+            The page icon is from <a href="https://icons8.com" target="_blank">icons8</a>.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
