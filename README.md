@@ -3,7 +3,7 @@
 <p align="center"><img src="figs/SAVeD_figure.jpg" width="70%" alt="" /></p> 
 
 Implementation from the paper:
-> Suzanne Stathatos, Michael Hobley, Markus Marks*, Pietro Perona*, [SAVeD: Learning to Denoise Low-SNR Video for Improved Downstream Performance](), March 2025.
+> Suzanne Stathatos, Michael Hobley, Markus Marks*, Pietro Perona*, [SAVeD: Learning to Denoise Low-SNR Video for Improved Downstream Performance](https://arxiv.org/abs/2504.00161), March 2025.
 
 SAVeD learns to denoise low-SNR video with no need for clean corresponding video, and works with a range of video including sonar, ultrasound, and miscroscopy video. Once trained, SAVeD can run inference to denoise video and this denoised video can be used for downstream tasks including classification, detection, tracking, and counting!
 
@@ -243,7 +243,7 @@ Please refer to our paper for details and consider citing it if you find the pap
 @article{stathatos2025saved,
   title={SAVeD: Learning to Denoise Low-SNR Video for Improved Downstream Performance},
   author={Stathatos, Suzanne and Hobley, Michael and Marks, Markus and Perona, Pietro},
-  journal={},
+  journal={https://arxiv.org/abs/2504.00161},
   year={2025},
   month={March}
 }
